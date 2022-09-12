@@ -11,7 +11,7 @@
 		CC2E5E1627C68F8A008B7E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2E5E1527C68F8A008B7E1A /* Assets.xcassets */; };
 		CC2E5E1C27C68F8B008B7E1A /* SaunaWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CC2E5E1B27C68F8B008B7E1A /* SaunaWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC2E5E2127C68F8B008B7E1A /* SaunaWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E5E2027C68F8B008B7E1A /* SaunaWatchApp.swift */; };
-		CC2E5E2327C68F8B008B7E1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E5E2227C68F8B008B7E1A /* ContentView.swift */; };
+		CC2E5E2327C68F8B008B7E1A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E5E2227C68F8B008B7E1A /* MainView.swift */; };
 		CC2E5E2527C68F8B008B7E1A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E5E2427C68F8B008B7E1A /* NotificationController.swift */; };
 		CC2E5E2727C68F8B008B7E1A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E5E2627C68F8B008B7E1A /* NotificationView.swift */; };
 		CC2E5E2927C68F8B008B7E1A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E5E2827C68F8B008B7E1A /* ComplicationController.swift */; };
@@ -68,7 +68,7 @@
 		CC2E5E1527C68F8A008B7E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC2E5E1B27C68F8B008B7E1A /* SaunaWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SaunaWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2E5E2027C68F8B008B7E1A /* SaunaWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaunaWatchApp.swift; sourceTree = "<group>"; };
-		CC2E5E2227C68F8B008B7E1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC2E5E2227C68F8B008B7E1A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CC2E5E2427C68F8B008B7E1A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		CC2E5E2627C68F8B008B7E1A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		CC2E5E2827C68F8B008B7E1A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -78,6 +78,7 @@
 		CC2E5E3027C68F8C008B7E1A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		CCA9AA2527C690F100060AA9 /* SaunaWatch WatchKit ExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SaunaWatch WatchKit ExtensionDebug.entitlements"; sourceTree = "<group>"; };
 		CCA9AA2727C690F100060AA9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		CCD9C24F27D8A77A00F0A481 /* SaunaWatch WatchKit ExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SaunaWatch WatchKit ExtensionRelease.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +124,10 @@
 		CC2E5E1F27C68F8B008B7E1A /* SaunaWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CCD9C24F27D8A77A00F0A481 /* SaunaWatch WatchKit ExtensionRelease.entitlements */,
 				CCA9AA2527C690F100060AA9 /* SaunaWatch WatchKit ExtensionDebug.entitlements */,
 				CC2E5E2027C68F8B008B7E1A /* SaunaWatchApp.swift */,
-				CC2E5E2227C68F8B008B7E1A /* ContentView.swift */,
+				CC2E5E2227C68F8B008B7E1A /* MainView.swift */,
 				CC2E5E2427C68F8B008B7E1A /* NotificationController.swift */,
 				CC2E5E2627C68F8B008B7E1A /* NotificationView.swift */,
 				CC2E5E2827C68F8B008B7E1A /* ComplicationController.swift */,
@@ -281,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC2E5E2527C68F8B008B7E1A /* NotificationController.swift in Sources */,
-				CC2E5E2327C68F8B008B7E1A /* ContentView.swift in Sources */,
+				CC2E5E2327C68F8B008B7E1A /* MainView.swift in Sources */,
 				CC2E5E2927C68F8B008B7E1A /* ComplicationController.swift in Sources */,
 				CC2E5E2127C68F8B008B7E1A /* SaunaWatchApp.swift in Sources */,
 				CC2E5E2727C68F8B008B7E1A /* NotificationView.swift in Sources */,
@@ -431,7 +433,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SaunaWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "SaunaWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = SaunaWatch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SaunaWatch WatchKit Extension/SaunaWatch WatchKit ExtensionRelease.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SaunaWatch WatchKit Extension/Preview Content\"";
@@ -463,7 +468,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SaunaWatch WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "SaunaWatch WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = SaunaWatch_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
