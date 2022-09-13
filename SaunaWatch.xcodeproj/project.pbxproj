@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC24A86F28CF92C4006D96C9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC24A86E28CF92C4006D96C9 /* MainViewModel.swift */; };
 		CC2E5E1127C68F89008B7E1A /* SaunaWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC2E5E1027C68F89008B7E1A /* SaunaWatch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC2E5E1627C68F8A008B7E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2E5E1527C68F8A008B7E1A /* Assets.xcassets */; };
 		CC2E5E1C27C68F8B008B7E1A /* SaunaWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CC2E5E1B27C68F8B008B7E1A /* SaunaWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC24A86E28CF92C4006D96C9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		CC2E5E0C27C68F89008B7E1A /* SaunaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaunaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2E5E1027C68F89008B7E1A /* SaunaWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SaunaWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2E5E1527C68F8A008B7E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				CCA9AA2527C690F100060AA9 /* SaunaWatch WatchKit ExtensionDebug.entitlements */,
 				CC2E5E2027C68F8B008B7E1A /* SaunaWatchApp.swift */,
 				CC2E5E2227C68F8B008B7E1A /* MainView.swift */,
+				CC24A86E28CF92C4006D96C9 /* MainViewModel.swift */,
 				CC2E5E2427C68F8B008B7E1A /* NotificationController.swift */,
 				CC2E5E2627C68F8B008B7E1A /* NotificationView.swift */,
 				CC2E5E2827C68F8B008B7E1A /* ComplicationController.swift */,
@@ -287,6 +290,7 @@
 				CC2E5E2927C68F8B008B7E1A /* ComplicationController.swift in Sources */,
 				CC2E5E2127C68F8B008B7E1A /* SaunaWatchApp.swift in Sources */,
 				CC2E5E2727C68F8B008B7E1A /* NotificationView.swift in Sources */,
+				CC24A86F28CF92C4006D96C9 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
