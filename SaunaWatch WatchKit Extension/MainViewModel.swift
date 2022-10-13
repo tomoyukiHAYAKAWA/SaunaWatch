@@ -6,8 +6,10 @@ final class MainViewModel: ObservableObject {
 
     @Published var timerString: String = "00:00"
     @Published var isProgression: Bool = true
+    @Published var progression12Value: CGFloat = 0.0
     @Published var progressionValue: CGFloat = 0.0
-    private var timerCount: Int = 0
+    private var timer12Count: CGFloat = 0.0
+    private var timerCount: CGFloat = 0.0
     private var cancellable: AnyCancellable?
 
     init() {
@@ -22,30 +24,38 @@ final class MainViewModel: ObservableObject {
 
     /// サークルの進行をリセットする
     func tappedRepeatButton() {
+        timer12Count = 0
         timerCount = 0
+        progression12Value = 0.0
         progressionValue = 0.0
-        timerString = "00:00"
+        timerString = "0"
     }
 
     // MARK: - Private
 
     private func startTimer() {
-        cancellable = Timer.publish(every: 1, on: .main, in: .default)
+        cancellable = Timer.publish(every: 0.01, on: .main, in: .default)
             .autoconnect()
             .sink { [weak self] _ in
-                self?.countUp()
+                self?.countUp12Minutes()
+                self?.countUpMinute()
             }
     }
 
-    private func countUp() {
-        if timerCount > 720 { timerCount = 0 }
-        timerCount = timerCount + 1
+    private func countUp12Minutes() {
+        if timer12Count >= 720 { timer12Count = 0 }
+        timer12Count = timer12Count + 0.01
         // 円を進める値
-        progressionValue = CGFloat(timerCount) / 720.0
-        // 00:00の形式でフォーマット
-        let m = (timerCount % 3600) / 60
-        let s = (timerCount % 60)
+        progression12Value = timer12Count / 720.0
+        // 0フォーマット
+        let m = (Int(timer12Count) % 3600) / 60
         // 経過時間
-        timerString = String(String(format: "%02d:%02d", m, s))
+        timerString = String(String(format: "%d", m))
+    }
+
+    private func countUpMinute() {
+        if timerCount >= 60 { timerCount = 0 }
+        timerCount = timerCount + 0.01
+        progressionValue = timerCount / 60.0
     }
 }
